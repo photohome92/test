@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photohome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="topbar">
+    <div class="top-inner">
+        <button class="cart-btn" onclick="location.href='cart.html'">
+            🛒 Cart
+        </button>
+
+        <div class="logo-center">
+            <img src="logo.png" alt="Logo">
+            <h1>Photohome</h1>
+            <p class="mobile">📞 03338181082</p>
+            <p class="email">📧 photohome92@gmail.com</p>
+            <p>Premium Custom Products</p>
+        </div>
+
+        <div class="phone">
+            📞 03338181082
+        </div>
+    </div>
+</div>
+
+<div class="products">
+    <!-- FRAMES -->
+    <div class="card">
+        <img src="images/frames1.jpg">
+        <div class="info">
+            <h3>Frames</h3>
+            <p class="price">Rs 1599</p>
+            <button onclick="openProduct('frames')">View</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/mirrorframes1.jpg">
+        <div class="info">
+            <h3>Mirror Frames</h3>
+            <p class="price">Rs 2000</p>
+            <button onclick="openProduct('mirrorframes')">View</button>
+        </div>
+    </div>
+
+    <!-- MUGS -->
+    <div class="card">
+        <img src="images/whitemug1.jpg">
+        <div class="info">
+            <h3>White Mug</h3>
+            <p class="price">Rs 799</p>
+            <button onclick="openProduct('whitemug')">View</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/colourmug1.jpg">
+        <div class="info">
+            <h3>Colour Mug</h3>
+            <p class="price">Rs 1099</p>
+            <button onclick="openProduct('colourmug')">View</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/heartmug1.jpg">
+        <div class="info">
+            <h3>Heart Mug</h3>
+            <p class="price">Rs 1199</p>
+            <button onclick="openProduct('heartmug')">View</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/magicmug1.jpg">
+        <div class="info">
+            <h3>Magic Mug</h3>
+            <p class="price">Rs 1199</p>
+            <button onclick="openProduct('magicmug')">View</button>
+        </div>
+    </div>
+
+    <!-- SHIRTS -->
+    <div class="card">
+        <img src="images/shirtwhite1.jpg">
+        <div class="info">
+            <h3>White Shirt</h3>
+            <p class="price">Rs 799</p>
+            <button onclick="openProduct('shirtwhite')">View</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/shirtcolour1.jpg">
+        <div class="info">
+            <h3>Colour Shirt</h3>
+            <p class="price">Rs 1499</p>
+            <button onclick="openProduct('shirtcolour')">View</button>
+        </div>
+    </div>
+
+    <!-- PRINTING -->
+    <div class="card">
+        <img src="images/flyers1.jpg">
+        <div class="info">
+            <h3>Flyers (100)</h3>
+            <p class="price">Rs 699</p>
+            <button onclick="openProduct('flyers')">View</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/visiting1.jpg">
+        <div class="info">
+            <h3>Visiting Cards</h3>
+            <p class="price">Rs 1999</p>
+            <button onclick="openProduct('visiting')">View</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/canvas1.jpg">
+        <div class="info">
+            <h3>Canvas Print</h3>
+            <p class="price">Rs 1399</p>
+            <button onclick="openProduct('canvas')">View</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/framedcanvas1.jpg">
+        <div class="info">
+            <h3>Framed Canvas</h3>
+            <p class="price">Rs 1599</p>
+            <button onclick="openProduct('framedcanvas')">View</button>
+        </div>
+    </div>
+
+    <!-- ACCESSORIES -->
+    <div class="card">
+        <img src="images/bottle1.jpg">
+        <div class="info">
+            <h3>Water Bottle</h3>
+            <p class="price">Rs 899</p>
+            <button onclick="openProduct('bottle')">View</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/tempbottle1.jpg">
+        <div class="info">
+            <h3>Temp Bottle</h3>
+            <p class="price">Rs 1499</p>
+            <button onclick="openProduct('tempbottle')">View</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/wallet1.jpg">
+        <div class="info">
+            <h3>Wallet</h3>
+            <p class="price">Rs 1299</p>
+            <button onclick="openProduct('wallet')">View</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/keyring1.jpg">
+        <div class="info">
+            <h3>Keyring</h3>
+            <p class="price">Rs 499</p>
+            <button onclick="openProduct('keyring')">View</button>
+        </div>
+    </div>
+
+</div>
+
+<footer>Photohome 92 © 2026</footer>
+
+<script>
+function openProduct(id){
+    localStorage.setItem("product",id);
+    location.href="product.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+/* =========================
+   RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#f4f4f4;  /* Light grey background for a more modern look */
+    color:#333;  /* Dark grey text for easy readability */
+}
+
+/* =========================
+   TOP BAR (PRO PREMIUM HEADER)
+========================= */
+.topbar{
+    background:#2c3e50;  /* Dark professional background */
+    padding:14px 20px;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* layout */
+.top-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    max-width:1200px;
+    margin:auto;
+    gap:10px;
+}
+
+/* LEFT CART */
+.cart-btn{
+    background:white;
+    color:#2c3e50;  /* Matching color to the dark background */
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.cart-btn:hover{
+    transform:scale(1.05);
+}
+
+/* CENTER LOGO */
+.logo-center{
+    text-align:center;
+    flex:1;
+}
+
+.logo-center img{
+    width:55px;
+    height:55px;
+    border-radius:12px;
+    background:white;
+    padding:4px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo-center h1{
+    font-size:50px;  /* Large and professional size for the name */
+    margin-top:5px;
+    color:white;  /* Set the name color to white */
+    font-weight:600;
+}
+
+.logo-center .mobile, 
+.logo-center .email{
+    font-size:18px;
+    margin-top: 5px;
+    color: #95a5a6;  /* Lighter grey color for contact info */
+}
+
+.logo-center p{
+    font-size:12px;
+    opacity:0.9;
+    color:#bdc3c7;  /* Soft grey for the tagline */
+}
+
+/* RIGHT PHONE */
+.phone{
+    font-size:14px;
+    background:rgba(255,255,255,0.15);
+    padding:8px 12px;
+    border-radius:8px;
+}
+
+/* =========================
+   HEADER (BELOW TOPBAR)
+========================= */
+.header{
+    text-align:center;
+    padding:30px 15px;
+    border-bottom:3px solid #2c3e50;
+}
+
+.header h1{
+    color:#2c3e50;
+    font-size:28px;
+}
+
+/* =========================
+   PRODUCTS GRID
+========================= */
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    padding:20px;
+}
+
+@media(max-width:768px){
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+.card{
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid #ddd;
+    transition:0.3s;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(46, 204, 113, 0.2);  /* Soft green hover effect */
+    border-color:#2c3e50;
+}
+
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+/* CARD INFO */
+.info{
+    padding:12px;
+    text-align:center;
+}
+
+.info h3{
+    font-size:15px;
+    margin-bottom:5px;
+}
+
+.price{
+    color:#e74c3c;  /* Red for prices to make them stand out */
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.info button{
+    width:100%;
+    padding:8px;
+    background:#2c3e50;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#34495e;  /* A darker grey for the footer */
+    color:white;
+    margin-top:30px;
+}
+
+/* =========================
+   MOBILE FIX (HEADER STACK)
+========================= */
+@media(max-width:768px){
+    .top-inner{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .phone{
+        display:none;
+    }
+}

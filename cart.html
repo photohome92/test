@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+<h1>Your Cart</h1>
+</div>
+
+<div class="container" id="box"></div>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let box=document.getElementById("box");
+
+let total=0;
+
+cart.forEach((c,i)=>{
+total+=c.price;
+
+box.innerHTML+=`
+<div class="item">
+<span>${c.name}</span>
+<span>Rs ${c.price}</span>
+</div>
+`;
+});
+
+box.innerHTML+=`
+<div class="total">Total: Rs ${total}</div>
+<button onclick="order()">Order on WhatsApp</button>
+`;
+
+function order(){
+
+let msg="🛒 Order:%0A%0A";
+
+cart.forEach((c,i)=>{
+msg+=(i+1)+". "+c.name+" - Rs "+c.price+"%0A";
+});
+
+msg+="%0A💰 Total: Rs "+total;
+msg+="%0A📞 03338181082";
+
+window.open("https://wa.me/923338181082?text="+msg);
+}
+
+</script>
+
+</body>
+</html>
